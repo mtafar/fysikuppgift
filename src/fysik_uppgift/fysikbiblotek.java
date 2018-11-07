@@ -1,10 +1,9 @@
 package fysik_uppgift;
 
-public class metoder {
-
+public class fysikbiblotek {
 
 	public static void main(String[] args) {
-		System.out.println(fahrenheitToCelsius(0));
+		System.out.println(fahrenheitToCelsius(1));
 		System.out.println(kelvinToCelsius(500));
 	}
 	
@@ -14,8 +13,5 @@ public class metoder {
 	public static double kelvinToCelsius(double kelvin){
 		return kelvin-273.15;	
 	}
-
 	
-	
-
-}
+}	
