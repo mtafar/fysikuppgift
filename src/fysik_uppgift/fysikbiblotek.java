@@ -2,10 +2,15 @@ package fysik_uppgift;
 
 public class fysikbiblotek {
 	static double G = 9.82;
+	static double P_0 = 101.3E3;
+	static double R = 8.3145;
+	static double C = 2.99792458;
+	static double G_= 6.6726 * 1E-11;
+	static double LY = 9.46055 * 1E15;
 	public static void main(String[] args) {
 		System.out.println(volumeToMass(SolidTable.IRON,0.008) + "kg");
 		System.out.println(svtDistance(2.8, 60) *60);
-		System.out.println(fluids.WATER, 5,1);
+		System.out.println(heat(fluids.WATER, 5 * fluids.WATER.density, 1) + " J per grad");
 		System.out.println(fluidPressure(fluids.WATER, 100));
 		System.out.println(velocityToHeight(50/3.6)+ 1.8);
 		double velocity = 100/3.6;
@@ -16,9 +21,10 @@ public class fysikbiblotek {
 		System.out.println(power(work,4.4));
 		double hopp = 0;
 		for (double i = 10; i > 0.5;) {
-			i = enum.velocityToHeight(enum.fallSpeed(i)) - (i/100);
-				hopp++;}
-	System.out.println( pressureUnderWater(155));
+			i = velocityToHeight(fallSpeed(i)) - (i/100);
+			hopp++;
+		}
+	System.out.println(pressureUnderWater(155));
 	System.out.println(kelvinToCelsius(2000)+ "c");
 	System.out.println(fallSpeed(800));
 	}
