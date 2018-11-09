@@ -6,6 +6,21 @@ public class fysikbiblotek {
 		System.out.println(volumeToMass(SolidTable.IRON,0.008) + "kg");
 		System.out.println(svtDistance(2.8, 60) *60);
 		System.out.println(fluids.WATER, 5,1);
+		System.out.println(fluidPressure(fluids.WATER, 100));
+		System.out.println(velocityToHeight(50/3.6)+ 1.8);
+		double velocity = 100/3.6;
+		double acceleration = velocity/4.4;
+		double force = acceleration * 740;
+		double distance = svtDistance(100/3.6,4.4);
+		double work = work(force,distance);
+		System.out.println(power(work,4.4));
+		double hopp = 0;
+		for (double i = 10; i > 0.5;) {
+			i = enum.velocityToHeight(enum.fallSpeed(i)) - (i/100);
+				hopp++;}
+	System.out.println( pressureUnderWater(155));
+	System.out.println(kelvinToCelsius(2000)+ "c");
+	System.out.println(fallSpeed(800));
 	}
 	/**
 	 * en metod som ändrar farenheit till celsius
@@ -39,7 +54,7 @@ public class fysikbiblotek {
 	 * @return
 	 */
 	public static double pressureUnderWater(double deep) {
-		double w = fluids.H20.density * deep * g;
+		double w = fluids.H20.density * deep * G;
 		return w;
 	}
 	/**
@@ -59,7 +74,7 @@ public class fysikbiblotek {
 	 * @return
 	 */
 	 public static double potentialEnergy(double mass, double height) {
-		double a = mass * g * height;
+		double a = mass * G * height;
 		return a;
 	}
 	/**
@@ -68,7 +83,7 @@ public class fysikbiblotek {
 	 * @return
 	 */
 	public static double fallSpeed(double height) {
-		double f = Math.sqrt(2 * g * height);
+		double f = Math.sqrt(2 * G * height);
 		return f;
 	}
 	/**
