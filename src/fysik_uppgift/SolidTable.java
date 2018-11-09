@@ -7,7 +7,7 @@ public enum SolidTable {
 	NICKEL(8.9,0.44,1455,310),
 	SILVER(10.5,0.24,962,105),
 	STEAL(7.8,0.46,1350),
-	URAN()
+	URAN(19.1,0.12,1135,53)
 	;
 
 	double density;
